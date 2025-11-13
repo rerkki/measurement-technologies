@@ -1,0 +1,407 @@
+[
+    {
+        "id": "0b794df2a71f1fa1",
+        "type": "tab",
+        "label": "Flow 13",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "64be83313ee914c4",
+        "type": "serial in",
+        "z": "0b794df2a71f1fa1",
+        "name": "Uno",
+        "serial": "0d6fde6a8c9d5048",
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "4c7f1fada0199828"
+            ]
+        ]
+    },
+    {
+        "id": "b6c265be45b0e63e",
+        "type": "debug",
+        "z": "0b794df2a71f1fa1",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "4c7f1fada0199828",
+        "type": "json",
+        "z": "0b794df2a71f1fa1",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 350,
+        "y": 280,
+        "wires": [
+            [
+                "6b7e4c5350cb2e34",
+                "659e14ee27b2c2c3",
+                "af8440016f2176b5",
+                "f4bd790271e94ce4"
+            ]
+        ]
+    },
+    {
+        "id": "6b7e4c5350cb2e34",
+        "type": "function",
+        "z": "0b794df2a71f1fa1",
+        "name": "function 17",
+        "func": "var obj = msg.payload\nmsg.payload = obj.x;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 360,
+        "wires": [
+            [
+                "49c93e2ed60d2465"
+            ]
+        ]
+    },
+    {
+        "id": "49c93e2ed60d2465",
+        "type": "ui_chart",
+        "z": "0b794df2a71f1fa1",
+        "name": "",
+        "group": "614298cf0f25c25a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "659e14ee27b2c2c3",
+        "type": "function",
+        "z": "0b794df2a71f1fa1",
+        "name": "function 18",
+        "func": "var obj = msg.payload\nmsg.payload = obj.y;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 440,
+        "wires": [
+            [
+                "50d7716b53c14ed2"
+            ]
+        ]
+    },
+    {
+        "id": "50d7716b53c14ed2",
+        "type": "ui_chart",
+        "z": "0b794df2a71f1fa1",
+        "name": "",
+        "group": "614298cf0f25c25a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "af8440016f2176b5",
+        "type": "function",
+        "z": "0b794df2a71f1fa1",
+        "name": "function 19",
+        "func": "var obj = msg.payload\nmsg.payload = obj.z;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 520,
+        "wires": [
+            [
+                "61a55525197835fe"
+            ]
+        ]
+    },
+    {
+        "id": "61a55525197835fe",
+        "type": "ui_chart",
+        "z": "0b794df2a71f1fa1",
+        "name": "",
+        "group": "614298cf0f25c25a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f4bd790271e94ce4",
+        "type": "gate",
+        "z": "0b794df2a71f1fa1",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "closed",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "status",
+        "persist": false,
+        "storeName": "memory",
+        "x": 530,
+        "y": 200,
+        "wires": [
+            [
+                "74ced6b36422394c",
+                "b6c265be45b0e63e"
+            ]
+        ]
+    },
+    {
+        "id": "562a39d9c7b0ad8e",
+        "type": "ui_switch",
+        "z": "0b794df2a71f1fa1",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "c5101cd704fe9c14",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "control",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "open",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "close",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 330,
+        "y": 100,
+        "wires": [
+            [
+                "f4bd790271e94ce4"
+            ]
+        ]
+    },
+    {
+        "id": "74ced6b36422394c",
+        "type": "csv",
+        "z": "0b794df2a71f1fa1",
+        "name": "Accel",
+        "spec": "rfc",
+        "sep": ";",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "x,y,z,max_x,max_y,max_z",
+        "skip": "0",
+        "strings": false,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 710,
+        "y": 200,
+        "wires": [
+            [
+                "da709eca1dd5f0f9"
+            ]
+        ]
+    },
+    {
+        "id": "da709eca1dd5f0f9",
+        "type": "file",
+        "z": "0b794df2a71f1fa1",
+        "name": "Accel.csv",
+        "filename": "C:\\Users\\erkkiras\\Documents\\Accel.csv",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 900,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d6fde6a8c9d5048",
+        "type": "serial-port",
+        "name": "Arduino",
+        "serialport": "COM15",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": 10000
+    },
+    {
+        "id": "614298cf0f25c25a",
+        "type": "ui_group",
+        "name": "Accelerometer",
+        "tab": "9ee0c6a861f272da",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c5101cd704fe9c14",
+        "type": "ui_group",
+        "name": "Accelerometer",
+        "tab": "e0f9e4eb81980de4",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9ee0c6a861f272da",
+        "type": "ui_tab",
+        "name": "Accelerometer",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e0f9e4eb81980de4",
+        "type": "ui_tab",
+        "name": "Accelerometer",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
